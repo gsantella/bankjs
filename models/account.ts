@@ -14,7 +14,7 @@ export default class Account {
     //     this.type = ""
     // }
 
-    constructor(initialBalance, type) {
+    constructor(initialBalance: number, type: string) {
         this.#id = uuidv4()
         this.#balance = initialBalance
         this.#type = type
@@ -26,12 +26,12 @@ export default class Account {
     }
 
     // doesn't say what it returns because it is a prototype based language
-    deposit(amount) {
+    deposit(amount: number) {
         throw 'Not Implemented'
         //throw new NotImplementedException()
     }
 
-    withdrawal(amount) {
-        throw new Exception('not implemented')
+    withdrawal(amount: number) {
+        throw 'Not Implemented'
     }
 }
