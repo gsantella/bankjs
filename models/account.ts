@@ -7,14 +7,14 @@ export default class Account {
     #balance;
     #type;
 
-    // no overloaded constructor allowed in JavaScript
+    // no overloaded constructor allowed in JavaScript or TypeScript
     // constructor() {
     //     this.id = ""
     //     this.balance = 0
     //     this.type = ""
     // }
 
-    constructor(initialBalance: number, type: string) {
+    constructor(initialBalance: number = 0, type: string = 'savings') {
         this.#id = uuidv4()
         this.#balance = initialBalance
         this.#type = type

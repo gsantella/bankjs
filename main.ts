@@ -6,9 +6,14 @@ import Account from './models/account.js'
 
 const user = new User()
 
+// both work when things are implicity set as public
+//user._fname = 'Bob'
+//user.FirstName = 'Tony'
+user.FirstName = 'Tony'
+
 // interestingly these work in JS, but not in TS
 //const a1 = new Account()
-//const a2 = new Account()
+const a2 = new Account()
 
 // properly send values to constructor
 //but 500.25 could be "500.25" and could be "wiggles"
@@ -19,7 +24,7 @@ const a3 = new Account(500.25, 'savings')
 //a3.withdrawal(44)
 
 //user.accounts.push(a1, a2, a3)
-user.accounts.push(a3)
+user.Accounts.push(a2, a3)
 
 console.log(user)
 
